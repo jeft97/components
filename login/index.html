@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="login__info">
+                <div class="logo-box">
+                    <img src="img/logo.svg" alt="logo of company" class="logo">
+                </div>
+                <div class="content">
+                    <img src="img/figure.svg" alt="" class="content__figure">
+                    <div class="content__text u-text-align-center">
+                        <h2 class="heading-2">Get better with money</h2>
+                        <p class="paragraphy">just a couple of clicks and we start</p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot is-active"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+            <div class="login__form">
+
+                <form action="#">
+                    <h1 class="heading-1">Sign in to CryptoCall</h1>
+                    <div class="input-group">
+                       
+                       <div class="input__email js-input__email">
+                            <label for="email">
+                                <img src="img/email.svg" alt="">
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="Email address">
+                       </div>
+                       <div class="input__password js-input__password">
+                            
+                            <label for="password">
+                                <img src="img/password.svg" alt="">
+                            </label>
+                            <input type="password" name="password" id="password" placeholder="password">
+                            <img src="img/invisible.svg" alt="" class="invisible-icon js-invisible-icon is-hidden">
+                       </div>
+                       <div class="input__checkbox">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Remember me</label>
+                       </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit"  class="btn btn--sign-in">Sign In</button>
+                        <a href="#" class="btn--sign-up u-text-align-center">
+                            <div class="box">
+                                <span>
+                                    <img src="img/google.svg" alt="">
+                                </span>
+                                Sign Up with Google
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#" class="other-sign-up">Don’t have an account? <span>Sign Up</span></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

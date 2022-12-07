@@ -1,0 +1,401 @@
+:root{
+    
+    --c-primary:hsl(233, 98%, 74%);
+    --c-primary-light:hsl(233, 98%, 84%);
+    --c-primary-dark:hsl(234, 44%, 24%);
+    --c-secondary:hsl(233, 13%, 60%);
+    --c-tertiary:hsl(233, 40%, 56%);
+
+    
+    --sucess:hsl(166, 63%, 50%);
+    --error:hsl(354, 70%, 54%);
+    --c-worning:hsl(45, 100%, 51%);
+
+    --c-green: hsl(152, 93%, 37%);
+    --c-white:#fff;
+    --color-black:#000;
+    --c-grey:#c5c5c5;
+
+    --grid-with:100rem;
+}
+
+
+::selection{
+    background-color: var(--c-primary);
+    color: var(--c-white);
+}
+
+.u-mb-small{margin-bottom: 4rem !important;}
+.u-text-align-center{text-align: center !important;}
+.u-border-color-sucess{
+    border-color: var(--sucess)!important;
+}
+
+.u-border-color-error{
+    border-color: var(--error)!important;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.login{
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    padding: 2rem 0;
+}
+
+.login__info{
+    background-image: linear-gradient(335.36deg, #7A89FE -18.29%, #8492FE 3.01%, rgba(122, 137, 254, 0.56) 130.68%);
+    padding: 2rem 4rem;
+    width: 38rem;
+    min-height: 55rem;
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--c-white);
+    
+}
+
+.logo-box{
+    position: absolute;
+    left: 2rem;
+}
+
+.logo{
+    height: 2.2rem;
+}
+.content{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transform: translateY(55%);
+}
+
+.content__figure{
+    height: 16rem;
+}
+.heading-2{
+    
+    margin: 1rem 0 .2rem 0;
+    font-size: 2.5rem;
+}
+
+
+.dots{
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.dot{
+    
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--c-tertiary);
+}
+
+.is-active{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: relative;
+  
+}
+.is-active::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .7rem;
+    height: .7rem;
+    background-color: var(--c-white);
+    border-radius: 50%;
+}
+
+
+.login__form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading-1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--c-primary-dark);
+    margin-bottom: 2rem;
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+       
+}
+::placeholder{
+    color: var(--c-secondary);
+    text-transform: capitalize;
+}
+.input__email,
+.input__password{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .5rem;
+    border: 1.9px solid #F2F2F2;
+    color: var(--c-secondary);
+    font-family: inherit;
+}
+.input__password{
+    position: relative;
+}
+.input__email input,
+.input__password input{
+    width: 100%;
+   
+}
+
+
+input, 
+input:focus{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--c-secondary);
+    
+}
+
+.button-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+   
+}
+
+.btn--sign-in{
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    color: var(--c-white);
+    background-color: var(--c-primary);
+    transition: all .8s ease;
+}
+.btn--sign-in:hover{
+    --c-primary:hsl(233, 77%, 64%);
+    background-color: var(--c-primary);
+   
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.btn--sign-up{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 4rem;
+    background-color: transparent;
+    border: 1.5px solid  #F2F2F2;
+    text-decoration: none;
+    color: var(--c-secondary);
+}
+
+.btn--sign-up:hover{
+    text-decoration: underline;
+}
+
+.other-sign-up{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--c-secondary);
+    font-size: 1.4rem;
+}
+.other-sign-up span{
+    color:var(--c-green);
+}
+
+.other-sign-up:hover{
+    text-decoration: underline;
+}
+.input__checkbox{
+    display: flex;
+    align-items: center;
+    color: var(--c-secondary);
+}
+
+input[type="checkbox"]{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.invisible-icon{
+    cursor: pointer;
+    transform: translateY(0);   
+    opacity: 1;
+    transition: all .5s ease;
+    position: absolute;
+    right: .5rem;
+}
+
+.is-hidden{
+ transform: translateY(2.8rem);   
+ opacity: 0;
+ 
+}
+
+
+@media only screen and  (max-width:50.938em){
+
+    html{
+        font-size: 50%;
+    }
+    .login{
+        width: 50%;
+
+    }
+    .login__info{
+        display: none;
+    }
+    .login__form{
+        width: 100%;
+    }
+    
+    .btn--sign-up{
+        font-size: 1rem;
+    }
+    .heading-1{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+@media only screen and  (max-width:76.7em){
+    .login{
+        width: 80%;
+    }
+}

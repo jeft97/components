@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Neue Montreal";
+    src: url(../font/NeueMontreal-Regular.otf) format("otf"),
+         url(../font/NeueMontreal-Bold.otf) format("otf");
+}
+
+
+:root{
+    --color-primary:hsl(45, 100%, 96%);
+    --color-primary-dark:hsl(46, 47%, 82%);
+    --color-secondary:hsl(168, 100%, 12%);
+    --color-secondary-light:hsla(169, 8%, 38%, 1);
+    --color-tertiary:hsl(169, 72%, 63%);
+
+    --color-black:hsl(0, 0%, 0%);
+    --color-white:hsl(0, 0%, 100%);
+}
+
+
+/*utilities*/
+.u-text-align-center{text-align: center !important;}
+.u-mb-smal{margin-bottom: 2rem !important;}
+.u-mb-medium{margin-bottom: 4rem !important;}
+.u-mb-big{margin-bottom: 8rem !important;}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 400;
+    color: var(--color-secondary-light);
+    background-color: var(--color-primary);
+    padding: 0 10rem;
+
+}
+
+::selection{
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.row{
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    
+}
+.section-testimonial{
+    width: 100%;
+    min-height: 100vh;
+    padding: 8rem 0 10rem 0;
+    
+}
+
+.heading-2{
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin-bottom: .5rem;
+}
+.heading-2 span{
+    color:var(--color-tertiary) ;
+}
+.heading-sub{
+    font-size: 1.8rem;
+}
+
+.c-testimonial{
+    padding: 2rem;
+    background-color: var(--color-white);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    box-shadow: 0 1.5rem 5rem  rgba(0, 0, 0, .1);
+    transition: all .3s ease;
+    border-radius: 1.2rem;
+}
+
+.c-testimonial:focus{
+   border: none;
+    outline: .3rem solid var(--color-secondary);
+}
+
+.c-testimonial:hover{
+    transform: translateY(-1.2rem) scale(1.1);
+}
+
+
+
+
+
+.c-testimonial__user{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+.user-info__name{
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.user-info__role{
+    font-size: 1.4rem;
+}
+
+.c-testimonial__description{
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.c-testimonial__footer{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.line{
+    width: 100%;
+    height: .14rem;
+    background-color: var(--color-secondary);
+}
+
+.dot{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background-color: var(--color-primary-dark);
+
+}
+
+.dot:not(:last-child){
+    margin-right: 1rem;
+}
+
+.is-active{
+    background-color: var(--color-secondary);
+}
+
+
+/*media query*/
+
+@media screen and  (max-width:50.938em){
+    html{
+        font-size: 60%;
+    }
+    .row{
+        max-width: 100rem;
+       flex-direction: column;
+    }
+    body{
+        padding: 0 2rem;
+    }
+    .dot{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+    
+   
+}
+
+@media screen and  (max-width:76.7em){
+    html{
+        font-size: 58%;
+    }
+    
+    .heading-2{
+        font-size: 3.5rem;
+    }
+    .heading-sub{
+        font-size:1.4rem ;
+    }
+    body{
+        padding: 0 4rem;
+    }
+
+}

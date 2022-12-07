@@ -1,0 +1,190 @@
+:root {
+  --clr-primary:hsl(240, 1%, 14%);
+  --clr-text:hsl(240, 3%, 38%);
+  --clr-secondary:hsl(206, 100%, 99%);
+  --clr-grey-light:hsl(0, 0%, 87%);
+  --clr-white:hsl(0, 0%, 100%);
+  --clr-black:#000;
+  --clr-shadown:hsl(202, 78%, 51%);
+  --font-primary:'Roboto', sans-serif;
+  --font-display:'Bai Jamjuree', sans-serif; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 62.8em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--clr-text); }
+
+.mb-medium {
+  margin-bottom: 2rem; }
+
+.heading-1 {
+  font-family: var(--font-display);
+  font-size: 6.8rem;
+  line-height: 1.1;
+  color: var(--clr-primary);
+  /*@media only screen and (max-width:$bp-lap-large){
+        font-size: 5rem;
+    }*/ }
+  .heading-1 span {
+    position: relative; }
+    .heading-1 span::after {
+      width: 124%;
+      height: 7rem;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1rem;
+      left: -2.3rem;
+      background-image: url(../img/cicle.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1; }
+      @media only screen and (max-width: 62.8em) {
+        .heading-1 span::after {
+          display: none; } }
+
+.heading-2 {
+  font-size: 1.6rem;
+  color: var(--clr-primary); }
+  .heading-2--big {
+    font-size: 2rem;
+    font-weight: 700; }
+
+.paragraphy {
+  font-size: 1.6rem; }
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 16rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  background-color: var(--clr-secondary); }
+
+.hero {
+  grid-column: center-start/center-end; }
+  .hero__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    align-items: start;
+    margin-top: 7rem; }
+    @media only screen and (max-width: 62.8em) {
+      .hero__content {
+        margin-top: 8rem; } }
+    @media only screen and (max-width: 49.5em) {
+      .hero__content {
+        grid-template-columns: 100%; } }
+
+.figure {
+  transform: translateY(-6rem);
+  grid-column: 2/-1; }
+  @media only screen and (max-width: 49.5em) {
+    .figure {
+      grid-column: 1/-1;
+      display: flex;
+      align-items: flex-start; } }
+  .figure__img {
+    height: 40rem; }
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem; }
+
+.logo {
+  width: 8.4rem;
+  height: 1.5rem; }
+
+.btn {
+  cursor: pointer;
+  appearance: none; }
+  .btn--cart {
+    border: 1px solid var(--clr-grey-light);
+    border-radius: 50%;
+    background-color: transparent;
+    width: 4rem;
+    height: 4rem;
+    outline: none; }
+  .btn--get-card {
+    padding: .6rem 1.7rem;
+    background-color: var(--clr-black);
+    font-size: 1.9rem;
+    color: var(--clr-white);
+    border: none; }
+
+.get-card-box {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+  .get-card-box span {
+    font-weight: 700;
+    color: var(--clr-primary); }
+
+.icon-shopping {
+  width: 1.4rem;
+  height: 1.4rem; }
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 4.4rem;
+  font-size: 1.3rem; }
+
+.navigation__item--link {
+  text-transform: uppercase;
+  color: var(--clr-primary); }
+
+.description {
+  position: relative; }
+  .description::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--clr-shadown);
+    opacity: 0.06;
+    filter: blur(15rem);
+    z-index: -1; }
+
+.caschback {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-row: min-content;
+  column-gap: 5rem;
+  margin-top: -7rem; }
+  @media only screen and (max-width: 62.8em) {
+    .caschback {
+      margin-top: 1rem; } }
+  .caschback__icon {
+    width: 3rem;
+    height: 3rem; }
+    .caschback__icon--fire {
+      width: 4rem;
+      transform: translateY(1rem); }
+  .caschback__text {
+    font-size: 1.4rem; }
